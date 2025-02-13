@@ -1,5 +1,5 @@
 {
-  "domain": "omniknew",
+  "domain": "omnik",
   "name": "Omnik Inverter",
   "version": "0.1.0",
   "iot_class": "cloud_polling",
