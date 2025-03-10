@@ -1,5 +1,5 @@
 """
-  Omnik Solar interface.
+  Omnik Solar interface. 
   
   This component can retrieve data from the Omnik inverter.
   
