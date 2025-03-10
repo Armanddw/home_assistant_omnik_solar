@@ -15,12 +15,13 @@ from homeassistant.components.sensor import (
     PLATFORM_SCHEMA,
     SensorEntity, 
     SensorStateClass,
+    UnitOfTemperature,
 )
 from homeassistant.const import ( 
     EVENT_HOMEASSISTANT_STOP, 
     CONF_NAME, 
     CONF_SCAN_INTERVAL,
-    TEMP_CELSIUS,
+    UnitOfTemperature.CELSIUS,
     DEVICE_CLASS_CURRENT,
     DEVICE_CLASS_ENERGY,
     DEVICE_CLASS_POWER,
