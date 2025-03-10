@@ -267,7 +267,7 @@ class OmnikInverter():
   """ Class with function for reading data from the Omnik inverter. """
   
   def __init__(self, host, port, serial_number):
-    """ Initialize the Omnik inverter object. """
+    """ Initialize the Omnik inverter object.  """
     self._host = host
     self._port = port
     self._serial_number = serial_number
