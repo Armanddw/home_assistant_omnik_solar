@@ -21,12 +21,7 @@ from homeassistant.components.sensor import (
 from homeassistant.const import ( 
     EVENT_HOMEASSISTANT_STOP, 
     CONF_NAME, 
-    CONF_SCAN_INTERVAL,
-    DEVICE_CLASS_CURRENT,
-    DEVICE_CLASS_ENERGY,
-    DEVICE_CLASS_POWER,
-    DEVICE_CLASS_VOLTAGE,
-    DEVICE_CLASS_TEMPERATURE, 
+    CONF_SCAN_INTERVAL, 
 )
 import homeassistant.helpers.config_validation as cv
 from homeassistant.util import Throttle
