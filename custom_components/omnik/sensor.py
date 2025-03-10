@@ -21,7 +21,6 @@ from homeassistant.const import (
     EVENT_HOMEASSISTANT_STOP, 
     CONF_NAME, 
     CONF_SCAN_INTERVAL,
-    UnitOfTemperature.CELSIUS,
     DEVICE_CLASS_CURRENT,
     DEVICE_CLASS_ENERGY,
     DEVICE_CLASS_POWER,
