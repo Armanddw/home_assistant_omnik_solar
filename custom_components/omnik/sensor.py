@@ -64,7 +64,7 @@ SENSOR_TYPES = {
     'acoutputvoltage':   ['AC Output Voltage', 'V', 'mdi:flash-outline', SensorDeviceClass.VOLTAGE, SensorStateClass.MEASUREMENT],
     'acoutputcurrent':   ['AC Output Current', 'A', 'mdi:flash-outline', SensorDeviceClass.CURRENT, SensorStateClass.MEASUREMENT],
     'acoutputfrequency': ['AC Output Frequency', 'Hz', 'mdi:flash-outline', None, SensorStateClass.MEASUREMENT],
-    'acoutputpower':     ['AC Output Power', 'W', 'mdi:flash-outline',DEVICE_CLASS_POWER, SensorStateClass.MEASUREMENT],
+    'acoutputpower':     ['AC Output Power', 'W', 'mdi:flash-outline',SensorDeviceClass.POWER, SensorStateClass.MEASUREMENT],
   }
 
 def _check_config_schema(conf):
