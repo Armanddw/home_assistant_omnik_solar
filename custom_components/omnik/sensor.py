@@ -14,8 +14,7 @@ import voluptuous as vol
 from homeassistant.components.sensor import (
     PLATFORM_SCHEMA,
     SensorEntity, 
-    STATE_CLASS_MEASUREMENT,
-    STATE_CLASS_TOTAL_INCREASING,
+    SensorStateClass,
 )
 from homeassistant.const import ( 
     EVENT_HOMEASSISTANT_STOP, 
@@ -58,18 +57,18 @@ CONF_SENSORS = 'sensors'
 SENSOR_PREFIX = 'Omnik'
 SENSOR_TYPES = {
     'status':            ['Status', None, 'mdi:solar-power', None, None],
-    'actualpower':       ['Actual Power', 'W', 'mdi:weather-sunny',DEVICE_CLASS_POWER, STATE_CLASS_MEASUREMENT],
-    'energytoday':       ['Energy Today', 'kWh', 'mdi:flash-outline', DEVICE_CLASS_ENERGY, STATE_CLASS_TOTAL_INCREASING],
-    'energytotal':       ['Energy Total', 'kWh', 'mdi:flash-outline', DEVICE_CLASS_ENERGY, STATE_CLASS_TOTAL_INCREASING],
+    'actualpower':       ['Actual Power', 'W', 'mdi:weather-sunny',DEVICE_CLASS_POWER, SensorStateClass.MEASUREMENT],
+    'energytoday':       ['Energy Today', 'kWh', 'mdi:flash-outline', DEVICE_CLASS_ENERGY, SensorStateClass.TOTAL_INCREASING],
+    'energytotal':       ['Energy Total', 'kWh', 'mdi:flash-outline', DEVICE_CLASS_ENERGY, SensorStateClass.TOTAL_INCREASING],
     'hourstotal':        ['Hours Total', 'Hours', 'mdi:timer', None, None],
     'invertersn':        ['Inverter Serial Number', None, 'mdi:information-outline', None, None],
-    'temperature':       ['Temperature', '°C', 'mdi:thermometer', DEVICE_CLASS_TEMPERATURE, STATE_CLASS_MEASUREMENT],
-    'dcinputvoltage':    ['DC Input Voltage', 'V', 'mdi:flash-outline', DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT],
-    'dcinputcurrent':    ['DC Input Current', 'A', 'mdi:flash-outline', DEVICE_CLASS_CURRENT, STATE_CLASS_MEASUREMENT],
-    'acoutputvoltage':   ['AC Output Voltage', 'V', 'mdi:flash-outline', DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT],
-    'acoutputcurrent':   ['AC Output Current', 'A', 'mdi:flash-outline', DEVICE_CLASS_CURRENT, STATE_CLASS_MEASUREMENT],
-    'acoutputfrequency': ['AC Output Frequency', 'Hz', 'mdi:flash-outline', None, STATE_CLASS_MEASUREMENT],
-    'acoutputpower':     ['AC Output Power', 'W', 'mdi:flash-outline',DEVICE_CLASS_POWER, STATE_CLASS_MEASUREMENT],
+    'temperature':       ['Temperature', '°C', 'mdi:thermometer', DEVICE_CLASS_TEMPERATURE, SensorStateClass.MEASUREMENT],
+    'dcinputvoltage':    ['DC Input Voltage', 'V', 'mdi:flash-outline', DEVICE_CLASS_VOLTAGE, SensorStateClass.MEASUREMENT],
+    'dcinputcurrent':    ['DC Input Current', 'A', 'mdi:flash-outline', DEVICE_CLASS_CURRENT, SensorStateClass.MEASUREMENT],
+    'acoutputvoltage':   ['AC Output Voltage', 'V', 'mdi:flash-outline', DEVICE_CLASS_VOLTAGE, SensorStateClass.MEASUREMENT],
+    'acoutputcurrent':   ['AC Output Current', 'A', 'mdi:flash-outline', DEVICE_CLASS_CURRENT, SensorStateClass.MEASUREMENT],
+    'acoutputfrequency': ['AC Output Frequency', 'Hz', 'mdi:flash-outline', None, SensorStateClass.MEASUREMENT],
+    'acoutputpower':     ['AC Output Power', 'W', 'mdi:flash-outline',DEVICE_CLASS_POWER, SensorStateClass.MEASUREMENT],
   }
 
 def _check_config_schema(conf):
